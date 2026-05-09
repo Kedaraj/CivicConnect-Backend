@@ -28,7 +28,7 @@ const incidentSchema = new mongoose.Schema(
     assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
     evidence: [
       {
-        url: String,
+        url: { type: String },
         type: { type: String, enum: ["photo", "video", "voice"], default: "photo" },
       },
     ],
